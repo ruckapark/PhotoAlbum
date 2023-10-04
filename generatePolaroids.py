@@ -21,7 +21,7 @@ def find_mindim(images):
     
     return mindim
 
-def find_basedims(images,ratio = 4.6):
+def find_basedims(images,ratio = 4.8):
     
     mindim = find_mindim(images)
     height,width = int(mindim * (15/ratio)),int(mindim * (10/ratio))
@@ -35,7 +35,7 @@ def add_image(images,num):
     base.fill(255)
     
     #topleft corner coordinates
-    x = {0:int((0.2/10)*width),1:int((5.2/10)*width)}
+    x = {0:int((0.1/10)*width),1:int((5.1/10)*width)}
     y = {0:int((1/15)*height),1:int((8.5/15)*height)}
     for i,l in enumerate([*images]):
         row,col = i//2,i%2
